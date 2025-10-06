@@ -1,0 +1,145 @@
+---
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import MobileThemeToggle from "../../components/MobileThemeToggle.astro";
+import { siteConfig } from "../../config";
+import "../../styles/global.css";
+
+// This function runs at build time for static generation
+export async function getStaticPaths() {
+    // You can fetch data from APIs, files, etc.
+    const posts = [
+        { slug: "first-post", title: "My First Post", content: "Hello world!" },
+        {
+            slug: "second-post",
+            title: "Another Post",
+            content: "More content here!",
+        },
+    ];
+
+    return posts.map((post) => ({
+        params: { slug: post.slug },
+        props: { post },
+    }));
+}
+
+// Get the post data from props
+const { post } = Astro.props;
+const { slug } = Astro.params;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href={import.meta.env.BASE_URL + "/favicon.svg"}
+        />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content={post.title} />
+        <title>{post.title} - {siteConfig.name}</title>
+    </head>
+    <body>
+        <!-- Theme initialization script -->
+        <script is:inline>
+            (function () {
+                const savedTheme = localStorage.getItem("theme");
+                const systemTheme = window.matchMedia(
+                    "(prefers-color-scheme: dark)",
+                ).matches
+                    ? "dark"
+                    : "light";
+                const currentTheme = savedTheme || systemTheme;
+
+                if (currentTheme === "dark") {
+                    document.documentElement.classList.add("dark");
+                }
+            })();
+        </script>
+
+        <Header />
+        <MobileThemeToggle />
+
+        <main
+            class="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300"
+        >
+            <div class="container mx-auto px-4 py-16 lg:py-24">
+                <article class="max-w-4xl mx-auto">
+                    <!-- Back navigation -->
+                    <nav class="mb-8">
+                        <a
+                            href={import.meta.env.BASE_URL || "/"}
+                            class="inline-flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors duration-300"
+                        >
+                            <svg
+                                class="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                            Back to home
+                        </a>
+                    </nav>
+
+                    <!-- Article header -->
+                    <header class="mb-12">
+                        <h1
+                            class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white"
+                        >
+                            {post.title}
+                        </h1>
+
+                        <div
+                            class="w-20 h-1 rounded-full mb-8"
+                            style={`background-color: ${siteConfig.accentColor}`}
+                        >
+                        </div>
+                    </header>
+
+                    <!-- Article content -->
+                    <div class="prose prose-lg dark:prose-invert max-w-none">
+                        <div
+                            class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+                        >
+                            <p>{post.content}</p>
+                        </div>
+                    </div>
+
+                    <!-- Back to home button -->
+                    <div
+                        class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700"
+                    >
+                        <a
+                            href={import.meta.env.BASE_URL || "/"}
+                            class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
+                        >
+                            <svg
+                                class="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                            Back to Home
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <Footer />
+    </body>
+</html>

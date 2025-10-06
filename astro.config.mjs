@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://gusdeyw.github.io',
-  base: '', // Empty string for <username>.github.io repositories
+  base: '/', // Set to / for <username>.github.io repositories
 });

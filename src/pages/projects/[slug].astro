@@ -1,7 +1,6 @@
 ---
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
-import MobileThemeToggle from "../../components/MobileThemeToggle.astro";
 import { siteConfig } from "../../config";
 import { createSlug, getProjectBySlug } from "../../utils/slug";
 import { getGitHubUrlFromProject } from "../../utils/github";
@@ -66,7 +65,7 @@ if (!project) {
         <link
             rel="icon"
             type="image/svg+xml"
-            href={import.meta.env.BASE_URL + "/favicon.svg"}
+            href={import.meta.env.BASE_URL + "favicon.svg"}
         />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
@@ -244,7 +243,6 @@ if (!project) {
         </script>
 
         <Header />
-        <MobileThemeToggle />
 
         <main
             class="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300"
@@ -254,7 +252,7 @@ if (!project) {
                     <!-- Back navigation -->
                     <nav class="mb-8">
                         <a
-                            href={`${import.meta.env.BASE_URL}/#projects`}
+                            href={`/#projects`}
                             class="inline-flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors duration-300"
                         >
                             <svg
@@ -395,7 +393,7 @@ if (!project) {
                         }
 
                         <a
-                            href={`${import.meta.env.BASE_URL}/#projects`}
+                            href={`/#projects`}
                             class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
                         >
                             <svg

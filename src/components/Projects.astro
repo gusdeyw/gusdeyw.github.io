@@ -73,7 +73,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 
                         <div class="flex gap-4 pt-2">
                           <a
-                            href={`${import.meta.env.BASE_URL}/projects/${createSlug(project.name)}`}
+                            href={`${import.meta.env.BASE_URL}projects/${createSlug(project.name)}`}
                             class="inline-flex items-center gap-1 text-sm font-semibold transition-all duration-300 hover:gap-2"
                             style={{ color: siteConfig.accentColor }}
                           >

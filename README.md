@@ -29,7 +29,7 @@ Production-ready payment gateway bridge built with Go, featuring Midtrans integr
 
 ### 📧 HTMLEmail - Go Package
 Powerful Go package for generating dynamic HTML email content from templates with advanced features.
-- **GitHub:** [https://github.com/gusdeyw/htmlemail](https://github.com/gusdeyw/htmlemail)
+- **GitHub:** [https://github.com/gusdeyw/go-htmlemail](https://github.com/gusdeyw/go-htmlemail)
 - **Tech Stack:** Golang, HTML Templates
 
 ### 🔐 Laravel API Sanctum Boilerplate

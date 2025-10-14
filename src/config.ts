@@ -112,7 +112,7 @@ console.addCommand('hello', () => {
       name: "HTMLEmail - Go Package",
       description:
         "A powerful and flexible Go package for generating dynamic HTML email content from templates. Features struct-based template population, multiple placeholder styles, HTML table generation, and CSS integration with comprehensive error handling.",
-      link: "https://github.com/gusdeyw/htmlemail",
+      link: "https://github.com/gusdeyw/go-htmlemail",
       linkType: "github",
       skills: ["Golang", "HTML", "Email Templates", "Go Modules"],
     },

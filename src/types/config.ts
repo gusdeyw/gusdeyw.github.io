@@ -6,6 +6,7 @@ export interface ProjectConfig {
     githubLink?: string; // Optional GitHub repository link for demo projects
     skills: string[];
     detailedContent?: string; // Optional detailed HTML content for project pages
+    fetchReadme?: boolean; // Optional: Enable/disable automatic README fetching from GitHub
 }
 
 export interface SocialConfig {

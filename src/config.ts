@@ -24,81 +24,7 @@ export const siteConfig: SiteConfig = {
       linkType: "demo", // "demo" for live demo, "github" for GitHub repository, "external" for other links
       githubLink: "https://github.com/gusdeyw/s-console", // Optional: GitHub repository link
       skills: ["TypeScript", "Vite", "UnoCSS", "JavaScript"],
-      detailedContent: `
-        <div class="project-detail-content">
-          <h2>🖥️ S-Console - Web Console Library</h2>
-          
-          <p>S-Console is a modern, lightweight JavaScript console library designed specifically for web applications. It provides developers with a powerful terminal-like interface that can be easily integrated into any web project.</p>
-
-          <h3>✨ Key Features</h3>
-          <ul>
-            <li><strong>Lightweight & Fast</strong> - Minimal bundle size with maximum performance</li>
-            <li><strong>Customizable Themes</strong> - Multiple built-in themes and full customization support</li>
-            <li><strong>Built-in Commands</strong> - Pre-configured commands like <code>help</code>, <code>clear</code>, <code>version</code></li>
-            <li><strong>Multiple Build Formats</strong> - ESM, CommonJS, UMD, and IIFE support</li>
-            <li><strong>TypeScript Support</strong> - Full TypeScript definitions and type safety</li>
-            <li><strong>Font Customization</strong> - Support for custom fonts and typography</li>
-            <li><strong>Command History</strong> - Navigate through command history with arrow keys</li>
-            <li><strong>Auto-completion</strong> - Smart command suggestions and tab completion</li>
-          </ul>
-
-          <h3>🚀 Quick Start</h3>
-          <pre><code>// Install via npm
-npm install s-console
-
-// Basic usage
-import { SConsole } from 's-console';
-
-const console = new SConsole({
-  container: '#console-container',
-  theme: 'dark',
-  font: 'Monaco, monospace'
-});
-
-console.addCommand('hello', () => {
-  console.print('Hello, World!');
-});</code></pre>
-
-          <h3>🎨 Customization</h3>
-          <p>S-Console offers extensive customization options:</p>
-          <ul>
-            <li><strong>Themes</strong>: Dark, Light, Matrix, Retro, and custom themes</li>
-            <li><strong>Colors</strong>: Fully customizable color schemes</li>
-            <li><strong>Fonts</strong>: Support for any web font or font family</li>
-            <li><strong>Prompts</strong>: Customizable command prompts and styling</li>
-          </ul>
-
-          <h3>📦 Build Formats</h3>
-          <p>The library is available in multiple formats to suit different project needs:</p>
-          <ul>
-            <li><strong>ESM</strong> - Modern ES modules for bundlers</li>
-            <li><strong>CommonJS</strong> - Node.js compatible format</li>
-            <li><strong>UMD</strong> - Universal module definition for browsers</li>
-            <li><strong>IIFE</strong> - Immediately invoked function expression for direct browser use</li>
-          </ul>
-
-          <h3>🛠️ Technical Implementation</h3>
-          <p>Built with modern web technologies:</p>
-          <ul>
-            <li><strong>TypeScript</strong> - Type-safe development and better IDE support</li>
-            <li><strong>Vite</strong> - Fast build tool and development server</li>
-            <li><strong>UnoCSS</strong> - Atomic CSS framework for styling</li>
-            <li><strong>Rollup</strong> - Module bundler for production builds</li>
-          </ul>
-
-          <h3>🎯 Use Cases</h3>
-          <ul>
-            <li>Developer tools and debugging interfaces</li>
-            <li>Interactive tutorials and documentation</li>
-            <li>Game development consoles</li>
-            <li>Administrative panels and dashboards</li>
-            <li>Educational programming environments</li>
-          </ul>
-
-          <h3>🌟 Live Demo</h3>
-          <p>Experience S-Console in action with the interactive demo showcasing all features, themes, and customization options.</p>
-        </div>
-      `,
+      fetchReadme: true,
     },
     {
       name: "Elvoiz - Invoice Management Expert",
@@ -115,6 +41,7 @@ console.addCommand('hello', () => {
       link: "https://github.com/gusdeyw/go-htmlemail",
       linkType: "github",
       skills: ["Golang", "HTML", "Email Templates", "Go Modules"],
+      fetchReadme: true,
     },
     {
       name: "PGBridge-Go",
@@ -123,6 +50,23 @@ console.addCommand('hello', () => {
       link: "https://github.com/gusdeyw/pgbridge-go",
       linkType: "github",
       skills: ["Golang", "Fiber", "Docker", "Payment Gateway", "Swagger", "Midtrans"],
+      fetchReadme: true,
+      detailedContent: `
+        <h2>💳 PGBridge-Go - Payment Gateway Bridge</h2>
+
+        <p>A production-ready payment gateway bridge built with Go that integrates with Midtrans payment gateway.</p>
+
+        <h3>✨ Features</h3>
+        <ul>
+          <li>🔒 Secure payment processing</li>
+          <li>🪝 Webhook handling</li>
+          <li>📱 QR code generation</li>
+          <li>🐳 Docker deployment ready</li>
+          <li>📚 Swagger API documentation</li>
+        </ul>
+
+        <p><em>This project uses manual content instead of fetching README from GitHub.</em></p>
+      `,
     },
     {
       name: "Laravel API Sanctum Boilerplate",
@@ -131,6 +75,7 @@ console.addCommand('hello', () => {
       link: "https://github.com/gusdeyw/laravel-api-sanctum-boilerplate",
       linkType: "github",
       skills: ["Laravel", "PHP", "Sanctum", "MySQL", "Redis", "PHPUnit", "API"],
+      fetchReadme: true,
     },
     {
       name: "Spring Vacancy Management",
@@ -139,6 +84,7 @@ console.addCommand('hello', () => {
       link: "https://github.com/gusdeyw/spring-vacancy",
       linkType: "github",
       skills: ["Java", "Spring Boot", "MongoDB", "Docker", "Maven", "REST API"],
+      fetchReadme: true,
     },
     {
       name: "Litepicker (Enhanced Fork)",
@@ -147,6 +93,7 @@ console.addCommand('hello', () => {
       link: "https://github.com/gusdeyw/Litepicker",
       linkType: "github",
       skills: ["TypeScript", "JavaScript", "SCSS", "Date Picker", "Frontend"],
+      fetchReadme: true,
     },
     {
       name: "ElvDoc - Document Management Library",
@@ -155,6 +102,7 @@ console.addCommand('hello', () => {
       link: "https://github.com/elvoiz-enterprises/elvdoc",
       linkType: "github",
       skills: ["Golang", "File Processing", "Document Management", "API Design"],
+      fetchReadme: true,
     },
     // {
     //   name: "University Syllabus Management System",

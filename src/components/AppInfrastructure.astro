@@ -1,0 +1,1027 @@
+---
+import { siteConfig } from "../config";
+---
+
+<section
+    id="app-infrastructure"
+    class="w-full bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
+>
+    <div
+        class="px-8 sm:px-12 md:px-16 lg:px-24 pb-4 sm:pb-6 md:pb-8 lg:pb-12 flex-shrink-0"
+    >
+        <h2
+            class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900 dark:text-gray-100"
+        >
+            Infrastructure
+        </h2>
+        <div
+            class="w-[75px] h-[5px] mt-2 rounded-full"
+            style={`background-color: ${siteConfig.accentColor}`}
+        >
+        </div>
+        <p
+            class="mt-6 text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-md"
+        >
+            Interactive visualization of my tech stack and deployment
+            architecture
+        </p>
+    </div>
+
+    <div
+        class="px-8 sm:px-12 md:px-16 lg:px-24 pb-8 sm:pb-12 md:pb-16 lg:pb-24"
+    >
+        <div
+            id="app-flow-visualization"
+            class="relative w-full aspect-video bg-transparent overflow-hidden transition-colors duration-300"
+        >
+            <!-- SVG Flow Diagram -->
+            <svg
+                class="absolute inset-0 w-full h-full"
+                viewBox="-200 0 1200 850"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+            >
+                <!-- Scaled group to keep elements proportional -->
+                <g transform="scale(1)">
+                    <!-- Title -->
+                    <text
+                        class="app-flow-title"
+                        x="600"
+                        y="40"
+                        font-size="28"
+                        font-weight="bold"
+                        text-anchor="middle"
+                        fill="#1f2937"
+                        class="dark:fill-gray-100"
+                    >
+                        Application Infrastructure & Tech Stack
+                    </text>
+
+                    <!-- Frontend Layer -->
+                    <g id="frontend-layer">
+                        <text
+                            x="100"
+                            y="120"
+                            font-size="16"
+                            font-weight="bold"
+                            fill="#1f2937"
+                            class="dark:fill-gray-100"
+                        >
+                            FRONTEND
+                        </text>
+
+                        <!-- Vue3Js -->
+                        <rect
+                            class="tech-box frontend-box"
+                            x="20"
+                            y="150"
+                            width="100"
+                            height="80"
+                            rx="8"
+                            fill="#1e40af"
+                            opacity="0.9"></rect>
+                        <image
+                            href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png"
+                            x="50"
+                            y="165"
+                            width="35"
+                            height="15"
+                        />
+                        <text
+                            class="tech-label"
+                            x="70"
+                            y="195"
+                            font-size="14"
+                            font-weight="bold"
+                            text-anchor="middle"
+                            fill="white"
+                        >
+                            Vue3Js
+                        </text>
+
+                        <!-- React -->
+                        <rect
+                            class="tech-box frontend-box"
+                            x="140"
+                            y="150"
+                            width="100"
+                            height="80"
+                            rx="8"
+                            fill="#1e40af"
+                            opacity="0.9"></rect>
+                        <image
+                            href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+                            x="170"
+                            y="165"
+                            width="35"
+                            height="15"
+                        />
+                        <text
+                            class="tech-label"
+                            x="190"
+                            y="195"
+                            font-size="14"
+                            font-weight="bold"
+                            text-anchor="middle"
+                            fill="#000"
+                        >
+                            React
+                        </text>
+
+                        <!-- HTML -->
+                        <rect
+                            class="tech-box frontend-box"
+                            x="260"
+                            y="150"
+                            width="100"
+                            height="80"
+                            rx="8"
+                            fill="#1e40af"
+                            opacity="0.9"></rect>
+                        <image
+                            href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
+                            x="285"
+                            y="165"
+                            width="40"
+                            height="15"
+                        />
+                        <text
+                            class="tech-label"
+                            x="310"
+                            y="195"
+                            font-size="14"
+                            font-weight="bold"
+                            text-anchor="middle"
+                            fill="white"
+                        >
+                            HTML
+                        </text>
+
+                        <!-- Tailwind -->
+                        <rect
+                            class="tech-box frontend-box"
+                            x="380"
+                            y="150"
+                            width="100"
+                            height="80"
+                            rx="8"
+                            fill="#1e40af"
+                            opacity="0.9"></rect>
+                        <image
+                            href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png"
+                            x="405"
+                            y="165"
+                            width="40"
+                            height="15"
+                        />
+                        <text
+                            class="tech-label"
+                            x="430"
+                            y="195"
+                            font-size="14"
+                            font-weight="bold"
+                            text-anchor="middle"
+                            fill="white"
+                        >
+                            Tailwind
+                        </text>
+                    </g>
+
+                    <!-- Backend Layer -->
+                    <g id="backend-layer">
+                        <text
+                            x="100"
+                            y="320"
+                            font-size="16"
+                            font-weight="bold"
+                            fill="#1f2937"
+                            class="dark:fill-gray-100"
+                        >
+                            BACKEND
+                        </text>
+
+                        <!-- GO -->
+                        <rect
+                            class="tech-box backend-box"
+                            x="20"
+                            y="350"
+                            width="100"
+                            height="80"
+                            rx="8"
+                            fill="#1e40af"
+                            opacity="0.9"></rect>
+                        <image
+                            href="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png"
+                            x="45"
+                            y="363"
+                            width="40"
+                            height="15"
+                        />
+                        <text
+                            class="tech-label"
+                            x="70"
+                            y="395"
+                            font-size="14"
+                            font-weight="bold"
+                            text-anchor="middle"
+                            fill="white"
+                        >
+                            GO
+                        </text>
+
+                        <!-- PHP -->
+                        <rect
+                            class="tech-box backend-box"
+                            x="140"
+                            y="350"
+                            width="100"
+                            height="80"
+                            rx="8"
+                            fill="#1e40af"
+                            opacity="0.9"></rect>
+                        <image
+                            href="https://www.php.net/images/logos/new-php-logo.svg"
+                            x="165"
+                            y="363"
+                            width="40"
+                            height="15"
+                        />
+                        <text
+                            class="tech-label"
+                            x="190"
+                            y="395"
+                            font-size="14"
+                            font-weight="bold"
+                            text-anchor="middle"
+                            fill="white"
+                        >
+                            PHP
+                        </text>
+
+                        <!-- NodeJs -->
+                        <rect
+                            class="tech-box backend-box"
+                            x="260"
+                            y="350"
+                            width="100"
+                            height="80"
+                            rx="8"
+                            fill="#1e40af"
+                            opacity="0.9"></rect>
+                        <image
+                            href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png"
+                            x="285"
+                            y="363"
+                            width="40"
+                            height="15"
+                        />
+                        <text
+                            class="tech-label"
+                            x="310"
+                            y="395"
+                            font-size="14"
+                            font-weight="bold"
+                            text-anchor="middle"
+                            fill="white"
+                        >
+                            NodeJs
+                        </text>
+                    </g>
+
+                    <!-- Database Layer -->
+                    <g id="database-layer">
+                        <text
+                            x="100"
+                            y="550"
+                            font-size="16"
+                            font-weight="bold"
+                            fill="#1f2937"
+                            class="dark:fill-gray-100"
+                        >
+                            DATABASE
+                        </text>
+
+                        <!-- MySQL/MariaDB -->
+                        <rect
+                            class="tech-box database-box"
+                            x="20"
+                            y="580"
+                            width="100"
+                            height="80"
+                            rx="8"
+                            fill="#1e40af"
+                            opacity="0.9"></rect>
+                        <image
+                            href="https://mariadb.com/wp-content/uploads/2019/11/mariadb-logo-vert_blue-transparent.png"
+                            x="35"
+                            y="591"
+                            width="50"
+                            height="12"
+                        />
+                        <text
+                            class="tech-label"
+                            x="70"
+                            y="625"
+                            font-size="12"
+                            font-weight="bold"
+                            text-anchor="middle"
+                            fill="white"
+                        >
+                            MySQL/
+                        </text>
+                        <text
+                            class="tech-label"
+                            x="70"
+                            y="640"
+                            font-size="12"
+                            font-weight="bold"
+                            text-anchor="middle"
+                            fill="white"
+                        >
+                            MariaDB
+                        </text>
+
+                        <!-- PostgreSQL -->
+                        <rect
+                            class="tech-box database-box"
+                            x="140"
+                            y="580"
+                            width="100"
+                            height="80"
+                            rx="8"
+                            fill="#1e40af"
+                            opacity="0.9"></rect>
+                        <image
+                            href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1985px-Postgresql_elephant.svg.png"
+                            x="155"
+                            y="591"
+                            width="50"
+                            height="12"
+                        />
+                        <text
+                            class="tech-label"
+                            x="190"
+                            y="625"
+                            font-size="14"
+                            font-weight="bold"
+                            text-anchor="middle"
+                            fill="white"
+                        >
+                            PostgreSQL
+                        </text>
+
+                        <!-- MongoDB -->
+                        <rect
+                            class="tech-box database-box"
+                            x="260"
+                            y="580"
+                            width="100"
+                            height="80"
+                            rx="8"
+                            fill="#1e40af"
+                            opacity="0.9"></rect>
+                        <image
+                            href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png"
+                            x="280"
+                            y="591"
+                            width="45"
+                            height="12"
+                        />
+                        <text
+                            class="tech-label"
+                            x="310"
+                            y="625"
+                            font-size="14"
+                            font-weight="bold"
+                            text-anchor="middle"
+                            fill="#000"
+                        >
+                            MongoDB
+                        </text>
+
+                        <!-- SQLite -->
+                        <rect
+                            class="tech-box database-box"
+                            x="380"
+                            y="580"
+                            width="100"
+                            height="80"
+                            rx="8"
+                            fill="#1e40af"
+                            opacity="0.9"></rect>
+                        <image
+                            href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/SQLite370.svg/2560px-SQLite370.svg.png"
+                            x="405"
+                            y="591"
+                            width="40"
+                            height="12"
+                        />
+                        <text
+                            class="tech-label"
+                            x="430"
+                            y="625"
+                            font-size="14"
+                            font-weight="bold"
+                            text-anchor="middle"
+                            fill="white"
+                        >
+                            SQLite
+                        </text>
+                    </g>
+
+                    <!-- Deployment & OS Layer -->
+                    <g id="deployment-layer">
+                        <!-- Deployment Section -->
+                        <text
+                            x="650"
+                            y="320"
+                            font-size="16"
+                            font-weight="bold"
+                            fill="#1f2937"
+                            class="dark:fill-gray-100"
+                        >
+                            DEPLOYMENT
+                        </text>
+
+                        <!-- Docker -->
+                        <rect
+                            class="tech-box deployment-box"
+                            x="570"
+                            y="350"
+                            width="100"
+                            height="80"
+                            rx="8"
+                            fill="#1e40af"
+                            opacity="0.9"></rect>
+                        <image
+                            href="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png"
+                            x="595"
+                            y="363"
+                            width="40"
+                            height="15"
+                        />
+                        <text
+                            class="tech-label"
+                            x="620"
+                            y="395"
+                            font-size="14"
+                            font-weight="bold"
+                            text-anchor="middle"
+                            fill="white"
+                        >
+                            Docker
+                        </text>
+
+                        <!-- Nginx -->
+                        <rect
+                            class="tech-box deployment-box"
+                            x="690"
+                            y="350"
+                            width="100"
+                            height="80"
+                            rx="8"
+                            fill="#1e40af"
+                            opacity="0.9"></rect>
+                        <image
+                            href="https://images.icon-icons.com/2699/PNG/512/nginx_logo_icon_169915.png"
+                            x="715"
+                            y="363"
+                            width="40"
+                            height="15"
+                        />
+                        <text
+                            class="tech-label"
+                            x="740"
+                            y="395"
+                            font-size="14"
+                            font-weight="bold"
+                            text-anchor="middle"
+                            fill="white"
+                        >
+                            Nginx
+                        </text>
+
+                        <!-- OS Section -->
+                        <text
+                            x="650"
+                            y="550"
+                            font-size="16"
+                            font-weight="bold"
+                            fill="#1f2937"
+                            class="dark:fill-gray-100"
+                        >
+                            OPERATING SYSTEM
+                        </text>
+
+                        <!-- CentOS -->
+                        <rect
+                            class="tech-box os-box"
+                            x="570"
+                            y="580"
+                            width="100"
+                            height="80"
+                            rx="8"
+                            fill="#1e40af"
+                            opacity="0.9"></rect>
+                        <image
+                            href="https://upload.wikimedia.org/wikipedia/commons/b/bf/Centos-logo-light.svg"
+                            x="595"
+                            y="591"
+                            width="40"
+                            height="12"
+                        />
+                        <text
+                            class="tech-label"
+                            x="620"
+                            y="625"
+                            font-size="14"
+                            font-weight="bold"
+                            text-anchor="middle"
+                            fill="white"
+                        >
+                            CentOS
+                        </text>
+
+                        <!-- Ubuntu -->
+                        <rect
+                            class="tech-box os-box"
+                            x="690"
+                            y="580"
+                            width="100"
+                            height="80"
+                            rx="8"
+                            fill="#1e40af"
+                            opacity="0.9"></rect>
+                        <image
+                            href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/UbuntuCoF.svg/2048px-UbuntuCoF.svg.png"
+                            x="715"
+                            y="591"
+                            width="40"
+                            height="12"
+                        />
+                        <text
+                            class="tech-label"
+                            x="740"
+                            y="625"
+                            font-size="14"
+                            font-weight="bold"
+                            text-anchor="middle"
+                            fill="white"
+                        >
+                            Ubuntu
+                        </text>
+                    </g>
+
+                    <!-- Connection Lines with Arrows -->
+                    <defs>
+                        <marker
+                            id="arrowhead"
+                            markerWidth="10"
+                            markerHeight="10"
+                            refX="9"
+                            refY="3"
+                            orient="auto"
+                        >
+                            <polygon points="0 0, 10 3, 0 6" fill="#8b5cf6"
+                            ></polygon>
+                        </marker>
+                        <!-- Gradient for data flow particles -->
+                        <linearGradient
+                            id="dataFlowGradient"
+                            x1="0%"
+                            y1="0%"
+                            x2="100%"
+                            y2="100%"
+                        >
+                            <stop
+                                offset="0%"
+                                style="stop-color:#8b5cf6;stop-opacity:0.8"
+                            ></stop>
+                            <stop
+                                offset="100%"
+                                style="stop-color:#06b6d4;stop-opacity:0"
+                            ></stop>
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Data flow particles (circles traveling on lines) -->
+                    <g id="data-flow-particles">
+                        <!-- Frontend to Backend -->
+                        <circle
+                            class="data-flow-dot"
+                            cx="70"
+                            cy="230"
+                            r="4"
+                            fill="#8b5cf6"
+                            opacity="0.8"></circle>
+                        <circle
+                            class="data-flow-dot"
+                            cx="190"
+                            cy="230"
+                            r="4"
+                            fill="#8b5cf6"
+                            opacity="0.8"></circle>
+                        <circle
+                            class="data-flow-dot"
+                            cx="310"
+                            cy="230"
+                            r="4"
+                            fill="#8b5cf6"
+                            opacity="0.8"></circle>
+                        <circle
+                            class="data-flow-dot"
+                            cx="430"
+                            cy="230"
+                            r="4"
+                            fill="#8b5cf6"
+                            opacity="0.8"></circle>
+
+                        <!-- Backend to Database -->
+                        <circle
+                            class="data-flow-dot"
+                            cx="70"
+                            cy="430"
+                            r="4"
+                            fill="#ec4899"
+                            opacity="0.8"></circle>
+                        <circle
+                            class="data-flow-dot"
+                            cx="190"
+                            cy="430"
+                            r="4"
+                            fill="#ec4899"
+                            opacity="0.8"></circle>
+                        <circle
+                            class="data-flow-dot"
+                            cx="310"
+                            cy="430"
+                            r="4"
+                            fill="#ec4899"
+                            opacity="0.8"></circle>
+
+                        <!-- Backend to Deployment -->
+                        <circle
+                            class="data-flow-dot"
+                            cx="380"
+                            cy="390"
+                            r="4"
+                            fill="#06b6d4"
+                            opacity="0.8"></circle>
+
+                        <!-- Deployment to OS -->
+                        <circle
+                            class="data-flow-dot"
+                            cx="620"
+                            cy="430"
+                            r="4"
+                            fill="#f59e0b"
+                            opacity="0.8"></circle>
+                        <circle
+                            class="data-flow-dot"
+                            cx="740"
+                            cy="430"
+                            r="4"
+                            fill="#f59e0b"
+                            opacity="0.8"></circle>
+                    </g>
+
+                    <!-- Frontend to Backend connections -->
+                    <line
+                        class="flow-line"
+                        x1="70"
+                        y1="230"
+                        x2="70"
+                        y2="350"
+                        stroke="#8b5cf6"
+                        stroke-width="2"
+                        opacity="0.4"
+                        marker-end="url(#arrowhead)"></line>
+                    <line
+                        class="flow-line"
+                        x1="190"
+                        y1="230"
+                        x2="190"
+                        y2="350"
+                        stroke="#8b5cf6"
+                        stroke-width="2"
+                        opacity="0.4"
+                        marker-end="url(#arrowhead)"></line>
+                    <line
+                        class="flow-line"
+                        x1="310"
+                        y1="230"
+                        x2="310"
+                        y2="350"
+                        stroke="#8b5cf6"
+                        stroke-width="2"
+                        opacity="0.4"
+                        marker-end="url(#arrowhead)"></line>
+                    <line
+                        class="flow-line"
+                        x1="430"
+                        y1="230"
+                        x2="310"
+                        y2="350"
+                        stroke="#8b5cf6"
+                        stroke-width="2"
+                        opacity="0.4"
+                        marker-end="url(#arrowhead)"></line>
+
+                    <!-- Backend to Database connections -->
+                    <line
+                        class="flow-line"
+                        x1="70"
+                        y1="430"
+                        x2="70"
+                        y2="580"
+                        stroke="#ec4899"
+                        stroke-width="2"
+                        opacity="0.4"
+                        marker-end="url(#arrowhead)"></line>
+                    <line
+                        class="flow-line"
+                        x1="190"
+                        y1="430"
+                        x2="190"
+                        y2="580"
+                        stroke="#ec4899"
+                        stroke-width="2"
+                        opacity="0.4"
+                        marker-end="url(#arrowhead)"></line>
+                    <line
+                        class="flow-line"
+                        x1="310"
+                        y1="430"
+                        x2="310"
+                        y2="580"
+                        stroke="#ec4899"
+                        stroke-width="2"
+                        opacity="0.4"
+                        marker-end="url(#arrowhead)"></line>
+
+                    <!-- Backend to Deployment connections -->
+                    <line
+                        class="flow-line"
+                        x1="380"
+                        y1="390"
+                        x2="570"
+                        y2="390"
+                        stroke="#06b6d4"
+                        stroke-width="2"
+                        opacity="0.4"
+                        marker-end="url(#arrowhead)"></line>
+
+                    <!-- Deployment to OS connections -->
+                    <line
+                        class="flow-line"
+                        x1="620"
+                        y1="430"
+                        x2="620"
+                        y2="580"
+                        stroke="#f59e0b"
+                        stroke-width="2"
+                        opacity="0.4"
+                        marker-end="url(#arrowhead)"></line>
+                    <line
+                        class="flow-line"
+                        x1="740"
+                        y1="430"
+                        x2="740"
+                        y2="580"
+                        stroke="#f59e0b"
+                        stroke-width="2"
+                        opacity="0.4"
+                        marker-end="url(#arrowhead)"></line>
+                </g>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<script>
+    import { animate, stagger } from "animejs";
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Animation timeline
+        let allAnimations = [];
+
+        // Animate tech boxes with staggered entrance
+        const frontendBoxes = animate(".frontend-box", {
+            targets: ".frontend-box",
+            opacity: [0.3, 0.9],
+            translateY: [20, 0],
+            duration: 600,
+            delay: stagger(100),
+            easing: "easeOutQuad",
+        });
+        allAnimations.push(frontendBoxes);
+
+        const backendBoxes = animate(".backend-box", {
+            targets: ".backend-box",
+            opacity: [0.3, 0.9],
+            translateY: [20, 0],
+            duration: 600,
+            delay: stagger(100, { start: 200 }),
+            easing: "easeOutQuad",
+        });
+        allAnimations.push(backendBoxes);
+
+        const databaseBoxes = animate(".database-box", {
+            targets: ".database-box",
+            opacity: [0.3, 0.9],
+            translateY: [20, 0],
+            duration: 600,
+            delay: stagger(100, { start: 400 }),
+            easing: "easeOutQuad",
+        });
+        allAnimations.push(databaseBoxes);
+
+        const deploymentBoxes = animate(".deployment-box", {
+            targets: ".deployment-box",
+            opacity: [0.3, 0.9],
+            translateY: [20, 0],
+            duration: 600,
+            delay: stagger(100, { start: 300 }),
+            easing: "easeOutQuad",
+        });
+        allAnimations.push(deploymentBoxes);
+
+        const osBoxes = animate(".os-box", {
+            targets: ".os-box",
+            opacity: [0.3, 0.9],
+            translateY: [20, 0],
+            duration: 600,
+            delay: stagger(100, { start: 500 }),
+            easing: "easeOutQuad",
+        });
+        allAnimations.push(osBoxes);
+
+        // Pulse animation for tech boxes
+        const pulseAnimation = animate(".tech-box", {
+            targets: ".tech-box",
+            boxShadow: [
+                "0 0 0 0 rgba(139, 92, 246, 0.7)",
+                "0 0 0 10px rgba(139, 92, 246, 0)",
+            ],
+            duration: 2000,
+            loop: true,
+            easing: "easeOutQuad",
+            delay: stagger(200),
+        });
+        allAnimations.push(pulseAnimation);
+
+        // Animate flow lines
+        const flowLines = document.querySelectorAll(".flow-line");
+        flowLines.forEach((line, index) => {
+            const length = (line as SVGLineElement).getTotalLength?.() || 0;
+            if (length > 0) {
+                line.setAttribute("stroke-dasharray", String(length));
+                line.setAttribute("stroke-dashoffset", String(length));
+
+                const lineAnimation = animate(line, {
+                    strokeDashoffset: [length, 0],
+                    duration: 1000,
+                    delay: 300 + index * 100,
+                    easing: "easeInOutQuad",
+                });
+                allAnimations.push(lineAnimation);
+            }
+        });
+
+        // Data flow animation on lines
+        animate(".data-flow-dot:nth-of-type(1)", {
+            cy: [230, 350],
+            opacity: [0.8, 0.2, 0.8],
+            duration: 2000,
+            loop: true,
+            easing: "linear",
+            delay: 400,
+        });
+
+        animate(".data-flow-dot:nth-of-type(2)", {
+            cy: [230, 350],
+            opacity: [0.8, 0.2, 0.8],
+            duration: 2000,
+            loop: true,
+            easing: "linear",
+            delay: 500,
+        });
+
+        animate(".data-flow-dot:nth-of-type(3)", {
+            cy: [230, 350],
+            opacity: [0.8, 0.2, 0.8],
+            duration: 2000,
+            loop: true,
+            easing: "linear",
+            delay: 600,
+        });
+
+        animate(".data-flow-dot:nth-of-type(4)", {
+            cx: [430, 310],
+            cy: [230, 350],
+            opacity: [0.8, 0.2, 0.8],
+            duration: 2000,
+            loop: true,
+            easing: "linear",
+            delay: 700,
+        });
+
+        // Backend to Database flows
+        animate(".data-flow-dot:nth-of-type(5)", {
+            cy: [430, 580],
+            opacity: [0.8, 0.2, 0.8],
+            duration: 2000,
+            loop: true,
+            easing: "linear",
+            delay: 600,
+        });
+
+        animate(".data-flow-dot:nth-of-type(6)", {
+            cy: [430, 580],
+            opacity: [0.8, 0.2, 0.8],
+            duration: 2000,
+            loop: true,
+            easing: "linear",
+            delay: 700,
+        });
+
+        animate(".data-flow-dot:nth-of-type(7)", {
+            cy: [430, 580],
+            opacity: [0.8, 0.2, 0.8],
+            duration: 2000,
+            loop: true,
+            easing: "linear",
+            delay: 800,
+        });
+
+        // Backend to Deployment flow
+        animate(".data-flow-dot:nth-of-type(8)", {
+            cx: [380, 570],
+            opacity: [0.8, 0.2, 0.8],
+            duration: 2000,
+            loop: true,
+            easing: "linear",
+            delay: 700,
+        });
+
+        // Deployment to OS flows
+        animate(".data-flow-dot:nth-of-type(9)", {
+            cy: [430, 580],
+            opacity: [0.8, 0.2, 0.8],
+            duration: 2000,
+            loop: true,
+            easing: "linear",
+            delay: 800,
+        });
+
+        animate(".data-flow-dot:nth-of-type(10)", {
+            cy: [430, 580],
+            opacity: [0.8, 0.2, 0.8],
+            duration: 2000,
+            loop: true,
+            easing: "linear",
+            delay: 900,
+        });
+
+        // Continuous subtle glow effect
+        const glowAnimation = animate(".tech-label", {
+            targets: ".tech-label",
+            opacity: [0.9, 1, 0.9],
+            duration: 3000,
+            loop: true,
+            easing: "easeInOutQuad",
+            delay: stagger(100),
+        });
+        allAnimations.push(glowAnimation);
+    });
+</script>
+
+<style>
+    .tech-box {
+        transition: all 0.3s ease;
+        filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
+    }
+
+    .tech-box:hover {
+        filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+    }
+
+    .flow-line {
+        transition: stroke 0.3s ease;
+    }
+
+    .data-flow-dot {
+        filter: drop-shadow(0 0 3px rgba(139, 92, 246, 0.6));
+        animation: glow 1s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+        0%,
+        100% {
+            filter: drop-shadow(0 0 3px rgba(139, 92, 246, 0.6));
+        }
+        50% {
+            filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.9));
+        }
+    }
+</style>

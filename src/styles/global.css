@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Define theme-aware custom properties for infrastructure visualization */
+:root {
+  --tech-box-fill: #e5e7eb;
+  /* gray-200 for light mode */
+  --tech-text-fill: #1f2937;
+  /* gray-800 for light mode */
+}
+
+.dark {
+  --tech-box-fill: #374151;
+  /* gray-700 for dark mode */
+  --tech-text-fill: #f3f4f6;
+  /* gray-100 for dark mode */
+}
+
 body {
   font-family: 'IBM Plex Mono', monospace;
   transition: background-color 0.3s ease, color 0.3s ease;

@@ -44,6 +44,15 @@ export const siteConfig: SiteConfig = {
       fetchReadme: true,
     },
     {
+      name: "JSONLog - Go Package",
+      description:
+        "A lightweight Go package for structured JSON logging with support for multiple log levels, custom fields, and flexible output formatting. Simplifies logging in Go applications with an intuitive API and zero external dependencies.",
+      link: "https://github.com/gusdeyw/jsonlog-go",
+      linkType: "github",
+      skills: ["Golang", "Logging", "JSON", "Go Modules"],
+      fetchReadme: true,
+    },
+    {
       name: "PGBridge-Go",
       description:
         "A lightweight, production-ready payment gateway bridge built with Go. Integrates with Midtrans and supports secure payment flows, webhooks, QR code generation, and Docker deployment with Swagger API documentation.",
